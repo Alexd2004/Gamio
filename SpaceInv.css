@@ -3,7 +3,11 @@ body {
     text-align: center;
 }
 
-
+.space {
+    font-size: bold;
+    font-style: italic;
+    
+}
 
 #boardSpace {
     background-color: black;

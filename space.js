@@ -120,7 +120,7 @@ function update() {
         context.fillStyle="white";
         context.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
 
-        // bullet hits alien XD
+        // bullet hits alien 
         for (let j=0; j < alienArray.length; j++){
             let alien = alienArray[j];
             if (!bullet.used && alien.alive && detectCollision(bullet, alien))    { // alien needs to be alived and bullet to not be used
