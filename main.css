@@ -22,7 +22,7 @@
 }
 
 .Gamio {
-    font-family: Press Start 2P;
+    font-family: "Press Start 2p";
     font-size:64px ;
 }
 
@@ -60,4 +60,22 @@
 
 .navbar .link:hover::before {
     width: 100%;
+}
+
+
+.main_page {
+    background-color: #240844;
+    height: 950px;
+    width: 100%;
+    max-width: 1300px;
+    display: flex; /* Set to flex to use flexbox properties */
+    justify-content: center;
+}
+
+.row {
+    height: 300px;
+}
+
+.game_box {
+    width: 450px;
 }
