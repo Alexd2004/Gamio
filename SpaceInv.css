@@ -6,9 +6,16 @@ body {
 .space {
     font-size: bold;
     font-style: italic;
-    
+    font-family: "Press Start 2P";
+}
+body {
+    background-image: url('./Spacephotos/space.png'); /* Replace with your image path */
+    background-size: cover; /* This ensures the background covers the entire div */
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 #boardSpace {
-    background-color: black;
-}
+    background-color: rgb(26, 25, 25);
+    border-radius: 5px;
+}   

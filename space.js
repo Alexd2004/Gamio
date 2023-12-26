@@ -20,6 +20,11 @@ let ship = {
     height : shipHeight
 }
 
+
+
+
+
+
 let shipImg;
 let shipVelocityX = tileSize; // moves the ship with this speed
 

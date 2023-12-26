@@ -1,7 +1,149 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+body {
+    margin: 0;
+    padding: 0;
+}
+.topofscreenbox {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+.lbox {
+    background-color: #240844;
+    background: #240844;
+    background: linear-gradient(180deg, #541a96 -10%,#a1083b 99%);
+    height:80px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+
+
+}
+
+.smallcircle {
+    border-radius: 60%;
+    width: 25%;
+    height: 35%;
+    background-color: #491023;
+    background: #491023;
+    background: linear-gradient(180deg, #cb490c -10%,#491023 99%);
+}
+
+
+
+.divleft {
+    width: 15%;
+    height:80px;
+
+    background-color: #650e78;
+    background: #650e78;
+    background: linear-gradient(180deg, #650e78 -10%,#a1083b 99%);
+    border: 2px solid black;
+    box-sizing: border-box;
+
+    display: flex; /* Added to make divleft a flex container */
+    align-items: center; /* This will vertically center the child elements */
+    justify-content: flex-start; 
+}
+.divleft1 {
+    width: 15%;
+    height:80px;
+
+    background-color: #240844;
+    background: #240844;
+    background: linear-gradient(180deg, #541a96 -10%,#a1083b 99%);
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+
+    display: flex; /* Added to make divleft a flex container */
+    align-items: center; /* This will vertically center the child elements */
+    justify-content: flex-start; 
+
+
+
+}
+.divcenter {
+    width: 40%;
+    height:80px;
+
+    background-color: #d12961;
+    background: #d12961;
+    background: linear-gradient(180deg, #d12961 20%,#0f173f 99%);
+    justify-content: center;
+    align-items: flex-start;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+
+
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    
+
+}
+
+
+.oval {
+    background-color: rgb(21, 38, 71);
+    border-radius: 40px;
+    height:  50%;
+    width: 90%;
+    padding-left: 20px;
+    margin-left: 5px;
+    text-align: left;
+    
+
+    
+    
+}
+.oval h1 {
+    
+    font-family: "Rubik Broken Fax";
+    font-weight: 100;
+    font-size: 24px;
+    color: rgb(172, 170, 170);
+
+}
+
+.Ltext {
+    font-size: 30px;
+    font-family:Rubik Broken Fax ;
+    color: rgb(172, 170, 170);
+    margin-left: 5%;
+    margin-bottom: 10%;
+}
+
+
+
+.divright{
+    width: 20%;
+    height:80px;
+
+    background-color: green;
+
+}   
+
+
+
+/* 
+body {
+    margin: 0;
+    padding: 0;
+}
 .navbar {
     position: sticky;
     top: 0;
@@ -9,21 +151,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #240844;
-    background: #240844;
-    background: linear-gradient(90deg, #240844 30%,#421826 99%);
+    background-color: rgb(44, 42, 42);
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     padding: 2px 20px;
-    flex-grow: 5;
 }
 
 .Gamio {
     font-family: "Press Start 2p";
-    font-size:64px ;
+    font-size:46px ;
 }
 
 .a1 {
@@ -62,20 +201,55 @@
     width: 100%;
 }
 
-
-.main_page {
+.main_back {
     background-color: #240844;
-    height: 950px;
-    width: 100%;
-    max-width: 1300px;
-    display: flex; /* Set to flex to use flexbox properties */
-    justify-content: center;
-}
+    background: #240844;
+    background: linear-gradient(180deg, #240844 -10%,#47041a 99%);
 
-.row {
-    height: 300px;
+}
+.rows {
+    
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-top: 50px;
+    
 }
 
 .game_box {
-    width: 450px;
+    width: 50%;
+    text-align: center;
+    margin-right: -100px;
 }
+.game_box h1 {
+    color: white;
+    font-family: "Press Start 2P";
+    font-style: italic;
+    font-size: 30px;
+}
+
+.game_box img {
+    background-color: black;
+    border-radius: 25px;
+    height: 225px;
+    width: 225px;
+
+}
+
+.game_box p {
+    font-size: 20px;
+    color: white;
+    margin-top: -5px;
+}
+
+.rows3 {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 75px;
+} */
