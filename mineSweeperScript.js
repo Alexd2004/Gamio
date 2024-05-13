@@ -2,34 +2,54 @@
 
 import { TILE_STATUSES, createBoard, markTile, revealTile, checkWin, checkLose } from "./MineSweeper.js";
 
-const BOARD_SIZE = 10
-const NUMBER_OF_MINES = 3
+// const BOARD_SIZE = 10
+// const NUMBER_OF_MINES = 3
 const minesLeftText = document.querySelector("[data-mine-count]")
 
+// const board = createBoard(BOARD_SIZE, NUMBER_OF_MINES)
+// const boardElement = document.querySelector(".board")
+// const messageText = document.querySelector(".subtext")
+
+const boardSizeInput = document.querySelector("#boardSizeInput");
+const BOARD_SIZE = parseInt(boardSizeInput.value);
+
+const numberOfMinesInput = document.querySelector("#numberOfMinesInput");
+const NUMBER_OF_MINES = parseInt(numberOfMinesInput.value);
+ 
+
+const startGameButton = document.querySelector("#startGameButton");
 const board = createBoard(BOARD_SIZE, NUMBER_OF_MINES)
 const boardElement = document.querySelector(".board")
 const messageText = document.querySelector(".subtext")
 
 
-board.forEach(row => {
-    row.forEach(tile => {
-        boardElement.append(tile.element)
-        tile.element.addEventListener("click", () => {
-            revealTile(board, tile)
-            checkGameEnd()
-        })
-
-        tile.element.addEventListener("contextmenu", e => {
-            e.preventDefault
-            markTile(tile)
-            listMinesLeft()
+function initalizeGame(){
+// Clear the board element
+    boardElement.innerHTML = "";
+    board.forEach(row => {
+        row.forEach(tile => {
+            boardElement.append(tile.element)
+            tile.element.addEventListener("click", () => {
+                revealTile(board, tile)
+                checkGameEnd()
+            })
+    
+            tile.element.addEventListener("contextmenu", e => {
+                e.preventDefault
+                markTile(tile)
+                listMinesLeft()
+            })
         })
     })
-})
+    boardElement.style.setProperty("--size", BOARD_SIZE);
 
-//STYLE
-boardElement.style.setProperty("--size", BOARD_SIZE)
-minesLeftText.textContent = NUMBER_OF_MINES
+    // Display the number of mines left
+    minesLeftText.textContent = NUMBER_OF_MINES;
+
+    
+}
+
+startGameButton.addEventListener("click", initalizeGame);
 
 
 function listMinesLeft(){
@@ -47,7 +67,6 @@ function checkGameEnd(){
     if(win || lose){
         boardElement.addEventListener("click", stopProp, {capture: true})
         boardElement.addEventListener("contextment", stopProp, {capture: true})
-
     }
 
     if(win){
