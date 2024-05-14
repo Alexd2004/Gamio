@@ -22,7 +22,7 @@ numberOfMinesInput.addEventListener("input", () => {
 });
 const startGameButton = document.querySelector("#startGameButton");
 const boardElement = document.querySelector(".board")
-const messageText = document.querySelector(".subtext")
+const messageText = document.querySelector(".gameEndText")
 
 //BUGS
 // Right click issue? 
@@ -35,6 +35,8 @@ function initalizeGame(){
 
 // Clear the board element
     boardElement.innerHTML = "";
+
+
     board.forEach(row => {
         row.forEach(tile => {
             boardElement.append(tile.element)
@@ -63,13 +65,11 @@ startGameButton.addEventListener("click", initalizeGame);
 
 
 function listMinesLeft(board){
-    console.log("hello")
     const markedTilesCount = board.reduce((count, row) => {
         return count + row.filter(tile => tile.status === TILE_STATUSES.MARKED).length; // Change TILE_STATUSES to TILE_STATUSES.MARKED
     }, 0);
 
     minesLeftText.textContent = NUMBER_OF_MINES - markedTilesCount;
-    console.log("hell5o")
 
 }
 
@@ -83,10 +83,10 @@ function checkGameEnd(board){
     }
 
     if(win){
-        messageText.textContent = "you win"
+        messageText.textContent = "You win :)"
     }
     if(lose){
-        messageText.textContent = "you lose"
+        messageText.textContent = "You lose :("
         board.forEach(row =>{
             row.forEach(tile => {
                 if(tile.TILE_STATUSES === TILE_STATUSES.MARKED) markTile(tile)

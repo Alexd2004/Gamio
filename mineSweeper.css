@@ -11,6 +11,8 @@
     flex-direction: column;
     color: white;
   }
+
+ 
   
   .title {
     margin: 20px;
@@ -22,11 +24,24 @@
     margin-bottom: 10px;
   }
 
+  .gameEndText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: black; /* Adjust color as needed */
+     font-size: 4rem;
+    margin-bottom: 10px;
+  }
+
   .subtext2 {
     color: #CCC;
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
+
+  
   
   .board {
     display: inline-grid;
