@@ -33,7 +33,6 @@ export function createBoard(boardSize, numberOfMines){
         }
         board.push(row)
       }
-      console.log(board); // Log the created board to the console
 
       return board
     
